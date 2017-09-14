@@ -1,0 +1,9 @@
+[user]
+	name = mta
+	email = marco.tanner@clavisit.com
+[core]
+	editor = vim
+	autocrlf = input
+[diff]
+        tool = meld
+
