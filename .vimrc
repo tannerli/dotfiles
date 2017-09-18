@@ -11,6 +11,7 @@ set smartindent
 set cindent
 
 set autochdir
+set autoread
 
 set background=dark
 
@@ -26,4 +27,4 @@ set lazyredraw
 nmap <C-n> :tabnext<CR>
 nmap <c-p> :tabprevious<CR>
 
-cmap w!! w !sudo tee > /dev/null &
+cmap w!! w !sudo tee > /dev/null %
