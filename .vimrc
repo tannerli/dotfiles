@@ -24,6 +24,8 @@ filetype indent on
 "No redrawing during macros
 set lazyredraw
 
+set nobackup
+
 nmap <C-n> :tabnext<CR>
 nmap <c-p> :tabprevious<CR>
 
