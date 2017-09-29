@@ -17,6 +17,10 @@ function twitch {
   livestreamer twitch.tv/$1 $quali
 }
 
+git_branch () { 
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
 # This fixes the flickering screen after "waking" from the
 # lockscreen
 
