@@ -18,7 +18,7 @@ function twitch {
 }
 
 git_branch () { 
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
 }
 
 # This fixes the flickering screen after "waking" from the
@@ -26,6 +26,6 @@ git_branch () {
 
 function fix-flicker {
   xrandr --output "DP-2" --mode "1920x1080i" --rate 60
-  sleep 5
+  sleep 2
   xrandr --output "DP-2" --mode "1920x1080" --rate 60
 }
