@@ -30,3 +30,5 @@ nmap <C-n> :tabnext<CR>
 nmap <c-p> :tabprevious<CR>
 
 cmap w!! w !sudo tee > /dev/null %
+cmap W w
+cmap Q q
