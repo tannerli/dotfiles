@@ -6,6 +6,8 @@ alias vim='vim -p'
 
 alias fc='fc -e vim'
 
+alias qutebrowser='qutebrowser --backend webengine'
+
 alias sysupgrade='sudo apt update; sudo apt upgrade; sudo apt autoremove'
 
 function twitch {
@@ -26,6 +28,6 @@ git_branch () {
 
 function fix-flicker {
   xrandr --output "DP-2" --mode "1920x1080i" --rate 60
-  sleep 2
+  sleep 0
   xrandr --output "DP-2" --mode "1920x1080" --rate 60
 }
