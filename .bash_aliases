@@ -1,6 +1,7 @@
 
 alias acs='apt-cache search'
 alias gstatus='git status'
+alias st='git status'
 alias gadd='git add'
 alias vim='vim -p'
 
