@@ -7,6 +7,10 @@ alias vim='vim -p'
 
 alias fc='fc -e vim'
 
+function cdn {
+  mkdir $1 && cd $1
+}
+
 alias qutebrowser='qutebrowser --backend webengine'
 
 alias sysupgrade='sudo apt update; sudo apt upgrade; sudo apt autoremove'
