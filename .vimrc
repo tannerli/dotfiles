@@ -49,20 +49,29 @@ let g:gitgutter_sign_removed = '·'
 let g:gitgutter_sign_removed_first_line = '·'
 let g:gitgutter_sign_modified_removed = '·'
 
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+let g:ale_python_autopep8_executable = '/usr/bin/autopep8'
 
-" Lightline
 set noshowmode
 set laststatus=2
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
 let g:lightline = {
-\ 'colorscheme': 'wombat',
 \ 'active': {
-\   'left': [['mode', 'paste'], ['filename', 'modified']],
+\   'left': [['mode', 'paste'], ['filename', 'modified', 'gitbranch'] ],
 \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
 \ },
 \ 'component_expand': {
 \   'linter_warnings': 'LightlineLinterWarnings',
 \   'linter_errors': 'LightlineLinterErrors',
 \   'linter_ok': 'LightlineLinterOK'
+\ },
+\ 'component_function': {
+\   'gitbranch': 'vim-gitbranch#detect'
 \ },
 \ 'component_type': {
 \   'readonly': 'error',
