@@ -80,6 +80,8 @@ let g:lightline = {
 \ },
 \ }
 
+let g:vimwiki_list = [{'path':'~/.vimwiki', 'path_html':'~/.vimwiki/html'}]
+
 
 function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))
