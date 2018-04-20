@@ -7,6 +7,8 @@ alias vim='vim -p'
 
 alias fc='fc -e vim'
 
+export EDITOR=vim
+
 function cdn {
   mkdir $1 && cd $1
 }
