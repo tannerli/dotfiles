@@ -1,25 +1,44 @@
 <html>
   <head><title>Start page</title></head>
   <style type="text/css">
-div {
-  font-family: Arial, sans-serif;
-}
-
-    a {
-      font-color:
+  
+    body {
+      background: #000
     }
+
+    div {
+      font-family: monospace;
+        font-size: 16pt
+    }
+
+    a, a:visited {
+      color: #34e2e2;
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       display: inline-block;
-      border: 1px #aaa solid;
       padding: 10px;
     }
     .top {
-      background-color: #21a1cc;
+      font-weight: bold;
+      color: #34e2e2;
+        background: #222;
+        border: 1px #34e2e2 solid;
       padding: 10px;
     }
     .element {
-      background-color: #b1efff;
-      padding: 5px;
+      padding: 7px;
+        border-left: 1px #34e2e2 solid;
+        border-right: 1px #34e2e2 solid;
+        border-top: none;
+    }
+    .last{
+      border-bottom: 1px #34e2e2 solid;
     }
   </style>
   <body>
@@ -35,7 +54,7 @@ div {
       <div class="top"> Casemanager </div>
       <div class="element"> <a href="http://apps01.test.cloudarchive.ch:9080/navigator/?desktop=icmadmin">ICM Admin Desktop</a> </div>
       <div class="element"> <a href="http://apps01.test.cloudarchive.ch:9080/navigator/?desktop=icm&feature=Cases&tos=OSICVTGT&solution=ICV">ICG Krediworkflow</a> </div>
-      <div class="element"> <a href="http://apps01.test.cloudarchive.ch:9080/navigator/?desktop=icm&feature=Cases&tos=OSWITZTGT&solution=KWTOC">KWTOC Krediworkflow</a> </div>
+      <div class="element last"> <a href="http://apps01.test.cloudarchive.ch:9080/navigator/?desktop=icm&feature=Cases&tos=OSWITZTGT&solution=KWTOC">KWTOC Krediworkflow</a> </div>
     </div>
     </div>
     <div class="container">
@@ -43,6 +62,9 @@ div {
       <div class="element"> <a href="http://apps01.cloudarchive.ch:9080/acce">ACCE</a> </div>
       <div class="element"> <a href="http://apps01.cloudarchive.ch:9080/navigator">Navigator</a> </div>
       <div class="element"> <a href="https://apps01.cloudarchive.ch:9043/ibm/console">Websphere console</a> </div>
+      <div class="top"> Casemanager </div>
+      <div class="element"> <a href="http://apps01.cloudarchive.ch:9080/navigator/?desktop=icm&feature=Cases&tos=OSWITZPD&solution=KWTOC">KWTOC Krediworkflow</a> </div>
+      <div class="element last"> <a href="http://apps01.cloudarchive.ch:9080/navigator/?desktop=icmadmin">ICM Admin Desktop</a> </div>
     </div>
     <div class="container">
       <div class="top">Intercity STAGING</div>
@@ -52,7 +74,7 @@ div {
       <div class="element"> <a href="https://icgecm04:9046/ibm/console">Websphere console EDS</a> </div>
       <div class="top"> Casemanager </div>
       <div class="element"> <a href="http://icgecm04:9081/navigator/?desktop=icmadmin">ICM Admin Desktop</a> </div>
-      <div class="element"> <a href="http://icgecm04:9081/navigator/?desktop=icm&feature=Cases&tos=ICGOS01&solution=ICV">ICG Krediworkflow</a> </div>
+      <div class="element last"> <a href="http://icgecm04:9081/navigator/?desktop=icm&feature=Cases&tos=ICGOS01&solution=ICV">ICG Krediworkflow</a> </div>
     </div>
   </body>
 </html>
