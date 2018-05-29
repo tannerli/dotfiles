@@ -4,6 +4,7 @@ alias gstatus='git status'
 alias st='git status'
 alias gadd='git add'
 alias vim='vim -p'
+alias ip='ip --color'
 
 alias fc='fc -e vim'
 
