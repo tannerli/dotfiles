@@ -1,4 +1,4 @@
-execute pathogen#infect()
+silent! call pathogen#infect()
 
 filetype plugin on
 filetype indent on
