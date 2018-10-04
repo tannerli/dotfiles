@@ -1,13 +1,15 @@
 
 alias acs='apt-cache search'
-alias gstatus='git status'
-alias st='git status'
+alias fc='fc -e vim'
 alias gadd='git add'
+alias gstatus='git status'
+alias mux='tmuxinator'
+alias st='git status'
 alias vim='vim -p'
 alias ip='ip --color'
+alias jazze='/opt/jazze/jazze.sh'
 
-alias fc='fc -e vim'
-
+setxkbmap -option caps:escape
 export EDITOR=vim
 
 function cdn {
@@ -31,11 +33,7 @@ git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
 }
 
-# This fixes the flickering screen after "waking" from the
-# lockscreen
-
-function fix-flicker {
-  xrandr --output "DP-2" --mode "1920x1080i" --rate 60
-  sleep 0
-  xrandr --output "DP-2" --mode "1920x1080" --rate 60
+how_in () {
+  where="$1"; shift
+  IFS=+ curl "cht.sh/$where/$*"
 }
