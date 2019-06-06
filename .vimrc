@@ -1,4 +1,5 @@
 silent! call pathogen#infect()
+Plug 'lervag/vimtex'
 
 filetype plugin on
 filetype indent on
