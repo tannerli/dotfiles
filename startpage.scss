@@ -1,0 +1,44 @@
+$foreground-color: #34e2e2;
+$border: 1px $foreground-color solid;
+
+body {
+  background: #000
+}
+
+div {
+  font-family: monospace;
+  font-size: 16pt;
+}
+
+a, a:visited {
+  color: $foreground-color;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: inline-block;
+  padding: 10px;
+}
+
+.top {
+  font-weight: bold;
+  color: $foreground-color;
+  background: #222;
+  border: $border;
+  padding: 10px;
+}
+
+.element {
+  padding: 7px;
+  border-left: $border;
+  border-right: $border;
+  border-top: none;
+}
+
+.last {
+  border-bottom: $border;
+}
