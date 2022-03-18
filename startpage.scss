@@ -1,44 +1,65 @@
 $foreground-color: #34e2e2;
 $border: 1px $foreground-color solid;
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: #000
 }
 
 div {
   font-family: monospace;
-  font-size: 16pt;
+  color: $foreground-color;
+  font-size: 2rem;
 }
 
 a, a:visited {
+  display: block;
   color: $foreground-color;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  display: inline-block;
-  padding: 10px;
-}
-
-.top {
-  font-weight: bold;
-  color: $foreground-color;
-  background: #222;
-  border: $border;
-  padding: 10px;
-}
-
-.element {
   padding: 7px;
-  border-left: $border;
-  border-right: $border;
-  border-top: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.last {
-  border-bottom: $border;
+.project-grid {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
 }
+
+.project {
+  border: $border;
+  border-top: none;
+
+  &-title {
+    background: #222;
+    font-size: 2rem;
+    border-bottom: $border;
+    border-top: $border;
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  &-section {
+    position: relative;
+
+    &:not(:last-child){
+      border-bottom: $border;
+    }
+
+    &-title {
+      position: absolute;
+      bottom: 50%;
+      right: 1rem;
+      writing-mode: tb;
+      text-align: center;
+      transform: rotate(-180deg) translate(0, -50%);
+    }
+  }
+}
+
